@@ -165,16 +165,14 @@ footer {
   background: #ebeaea;
   text-align: center;
   box-shadow: 8px 12px 41px -22px rgba(0, 0, 0, 0.78);
+  margin-top: 50vh;
 }
 footer > p {
   font-size: 1.6rem;
   padding: 1rem;
   font-weight: 600;
 }
-.about {
-  width: 100%;
-  height: 87vh;
-}
+
 /* ##############################################
        Cotact Us Deigning
 ############################################# */
@@ -321,6 +319,97 @@ input[type="submit"]:hover {
   font-size: 1.8rem;
 }
 /* ##############################################
+       About Us
+############################################# */
+.about-head {
+  font-size: 4rem;
+  margin: 1rem 0;
+  -webkit-animation: tracking-in-expand-fwd 0.8s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.about-head::after {
+  content: "";
+  display: block;
+  background: var(--red-color);
+  width: 20%;
+  height: 5px;
+}
+.about-img {
+  width: 30%;
+  float: left;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.about-img img {
+  width: 100%;
+  padding-right: 1rem;
+}
+.about-cont {
+  text-align: justify;
+}
+.about-cont p {
+  font-size: 1.6rem;
+}
+.about-cont p a {
+  text-decoration: none;
+}
+/* ##############################################
        Media Queries
 ############################################# */
 @media screen and (max-width: 680px) {
@@ -333,10 +422,15 @@ input[type="submit"]:hover {
   nav ul li a {
     padding: 0;
   }
-}
-.dark-btn {
-  font-size: 1rem;
-  width: 6rem;
+  .dark-btn {
+    font-size: 1rem;
+    width: 6rem;
+  }
+  .about-img {
+    float: none;
+    width: 50%;
+    margin: 1rem auto;
+  }
 }
 @media screen and (max-width: 500px) {
   nav {
