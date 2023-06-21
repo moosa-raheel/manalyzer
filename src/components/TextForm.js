@@ -10,13 +10,12 @@ export default function TextForm(props) {
   };
   const copy = () => {
     let copyText = document.getElementById("text");
-    copyText.select();
     navigator.clipboard.writeText(copyText.value);
   };
   const onchange = (e) => {
     textChange(e.target.value);
   };
-  const textArray = text.split(" ");
+  const textArray = text.split(/\s+/);
   const pureTextArray = textArray.filter((a) => {
     return a !== "";
   });
@@ -28,6 +27,11 @@ export default function TextForm(props) {
     wordArray.reverse();
     const word = wordArray.join(" ");
     textChange(word);
+  };
+  const btn = {
+    opacity: text.length === 0 ? 0.5 : 1,
+    "pointer-events": "",
+    cursor: text.length === 0 ? "not-allowed" : "pointer",
   };
   return (
     <div className="container">
@@ -43,19 +47,19 @@ export default function TextForm(props) {
         value={text}
         onChange={onchange}
       ></textarea>
-      <button className="btn" onClick={clearText}>
+      <button className="btn" onClick={clearText} style={btn}>
         Clear Text
       </button>
-      <button className="btn" onClick={uppercase}>
+      <button className="btn" onClick={uppercase} style={btn}>
         Convert To UpperCase
       </button>
-      <button className="btn" onClick={lowercase}>
+      <button className="btn" onClick={lowercase} style={btn}>
         Convert To LowerCase
       </button>
-      <button className="btn" onClick={reverse}>
+      <button className="btn" onClick={reverse} style={btn}>
         Reverse Text
       </button>
-      <button className="btn" onClick={copy}>
+      <button className="btn" onClick={copy} style={btn}>
         Copy Text
       </button>
       <div className="summary">
@@ -66,9 +70,7 @@ export default function TextForm(props) {
       <div className="convert">
         <h1>Preview</h1>
         <p className="preview">
-          {text.length > 0
-            ? text
-            : "Enter Something in text box to preview it here"}
+          {text.length > 0 ? text : "Nothing to preview"}
         </p>
       </div>
     </div>

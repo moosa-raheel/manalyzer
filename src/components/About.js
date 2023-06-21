@@ -13,7 +13,7 @@ export default function About() {
             <h1>About Myself</h1>
             <p>
               Hey there. I am called by Moosa Raheel. I am from Karachi in
-              Pakistan.My mother language is Urdu. My hobby is Programming,
+              Pakistan. My mother language is Urdu. My hobby is Programming,
               listening songs and watching movies and web series. My favourite
               singer is Justin Bieber. My favourite programming language is
               JavaScript. My favourite personality is Linus Torvalds. I am 17
@@ -30,6 +30,7 @@ export default function About() {
               <a
                 href="https://github.com/moosa-bhai13/Manalyzer"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 github
               </a>{" "}
@@ -42,11 +43,19 @@ export default function About() {
               documentations. In other words you can say that this is the result
               of my own hard work. If you want chat with me so you can do it
               easily using{" "}
-              <a href="https://instagram.com" target="_blank">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 instaram
               </a>{" "}
               and kindly follow me on{" "}
-              <a href="https://github.com/moosa-bhai13" target="_blank">
+              <a
+                href="https://github.com/moosa-bhai13"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 github
               </a>{" "}
               to show yopur support.
