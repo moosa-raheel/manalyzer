@@ -1,18 +1,29 @@
 # Get Started With Manalyzer Web Application
 
-![Manalyzer Web Application Image](./src/Images/img.png)
+![Manalyzer Web Application Image](./src/Images/img.png "Image of Manalyzer Web Application")
 
-This project was Created By <b>Moosa</b>
+This project was Created By **Moosa Raheel**
+
+This site was build in React Js
 
 ## clone the project
 
-### `git clone https://github.com/moosa-bhai13/Manalyzer.git`
+> ### `git clone https://github.com/moosa-bhai13/Manalyzer.git`
+>
+> ### `cd  Manalyzer`
+>
+> ### `npm install`
+>
+> ### `npm start`
 
-### `cd  Manalyzer`
+---
 
-### `npm install`
+## Features of Manalyzer
 
-### `npm start`
+> - Convert UpperCase to lowerCase
+> - Convert lowerCase to UpperCase
+> - Remove All Spaces
+> - Reverse the Text
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -31,4 +42,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 This Project is already hosted
-[https://manalyzerm.netlify.app](https://manalyzerm.netlify.app)
+[https://manalyzerm.netlify.app](https://manalyzerm.netlify.app "Visit the website")
