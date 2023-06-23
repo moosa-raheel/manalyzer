@@ -8,6 +8,17 @@ export default function About() {
         <div className="about-sec">
           <div className="about-img">
             <img src={mypic} alt="My Pic" />
+            <div className="img-cont">
+              <h3>Follow Me</h3>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-follow"
+              >
+                Follow
+              </a>
+            </div>
           </div>
           <div className="about-cont">
             <h1>About Myself</h1>

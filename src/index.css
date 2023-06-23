@@ -411,6 +411,9 @@ input[type="submit"]:hover {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 @-webkit-keyframes scale-up-center {
   0% {
@@ -450,6 +453,51 @@ input[type="submit"]:hover {
 .about-cont h1 {
   color: var(--text-color);
 }
+a.btn-follow {
+  color: #fff;
+  display: block;
+  background: var(--red-color);
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0.3em;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+}
+a.btn-follow:hover {
+  background: var(--red-dark);
+}
+.img-cont {
+  color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.about-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000000af;
+  width: 100%;
+  height: 10%;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.about-img:hover .img-cont {
+  top: 50%;
+  opacity: 1;
+}
+.about-img:hover::after {
+  opacity: 1;
+  height: 100%;
+}
 /* ##############################################
        Media Queries
 ############################################# */
@@ -472,6 +520,12 @@ input[type="submit"]:hover {
     width: 50%;
     margin: 1rem auto;
   }
+  .img-cont {
+    display: none;
+  }
+  .about-img::after {
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   nav {
@@ -490,6 +544,12 @@ input[type="submit"]:hover {
     margin-left: 0.5rem;
   }
   .dark-btn {
+    display: none;
+  }
+  .img-cont {
+    display: none;
+  }
+  .about-img::after {
     display: none;
   }
 }

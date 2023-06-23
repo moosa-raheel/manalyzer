@@ -28,6 +28,11 @@ export default function TextForm(props) {
     const word = wordArray.join(" ");
     textChange(word);
   };
+  const space = () => {
+    let newString = text.replace(/\s+/g, "");
+    newString = text.replace(/ +/g, "");
+    textChange(newString);
+  };
   const btn = {
     opacity: text.length === 0 ? 0.5 : 1,
     "pointer-events": "",
@@ -61,6 +66,9 @@ export default function TextForm(props) {
       </button>
       <button className="btn" onClick={copy} style={btn}>
         Copy Text
+      </button>
+      <button className="btn" onClick={space} style={btn}>
+        Remove All Spaces
       </button>
       <div className="summary">
         <h1>Your Text Summary</h1>
