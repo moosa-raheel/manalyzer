@@ -4,7 +4,7 @@
 
 This project was Created By <b>Moosa</b>
 
-##clone the project
+## clone the project
 
 ### `git clone https://github.com/moosa-bhai13/Manalyzer.git`
 
