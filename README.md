@@ -8,13 +8,12 @@ This site was build in React Js
 
 ## clone the project
 
-> ### `git clone https://github.com/moosa-bhai13/Manalyzer.git`
->
-> ### `cd  Manalyzer`
->
-> ### `npm install`
->
-> ### `npm start`
+```bash
+git clone https://github.com/moosa-raheel/manalyzer.git
+cd manalyzer
+yarn install
+yarn start
+```
 
 ---
 
@@ -24,6 +23,7 @@ This site was build in React Js
 > - Convert lowerCase to UpperCase
 > - Remove All Spaces
 > - Reverse the Text
+> - Remove all spaces
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
